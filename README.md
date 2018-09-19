@@ -4,7 +4,12 @@
 
 1. Create a virtual machine with Ubuntu Server 18.04 LTS on VirtualBox.
 2. Configure the virtual machine to share a folder `Development` between the Host and Guest.
-3. Install VirtualBox Guest Additions on the virtual machine.
+3. Install VirtualBox Guest Additions on the virtual machine with the following commands (after insert the VBoxAdditions.iso on the virtual machine):
+```
+mount /dev/cdrom /mnt
+bash /mnt/VBoxLinuxAdditions.run
+
+```
 4. Give access to the shared folder on the guest machine located at `/media/sf_Development` to the regular user using the following command:
 ```
 adduser <username> vboxsf
